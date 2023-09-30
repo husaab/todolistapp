@@ -8,12 +8,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Nunito:wght@200&family=Raleway:wght@100;400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7ee11d06c7.js" crossorigin="anonymous"></script>
         
         <style>
             body{
-                background-color: #FAFAFA;
+                background-color: #FFB3B2;
                 font-family: "Nunito", sans-serif;
                 padding-top: 50px;
+                height: 100vh;
+                overflow: auto;
             }
 
             h1, h2, h3, h4, h5, h6{
@@ -37,7 +40,7 @@
                 justify-content: space-between;
                 color: #fff;
                 padding: 10px;
-                border-radius: 5px 5px 0 0;
+                
                 background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
             }
 
@@ -116,14 +119,26 @@
             }
 
             .button{
-                border: 1px solid #EB796F;
-                background: #FAFAFA;
-                color: #EB796F;
+                border: 1px solid #FFB3B2;
+                background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+                color: white;
                 padding:10px;
                 font-size: 14px;
                 border-radius: 5px;
                 cursor: pointer;
                 text-decoration: none;
+            }
+            
+            .button:hover{
+                opacity: 70%;
+            }
+
+            .button:before, .button:after{
+                transition: all 2s;
+            }
+
+            .submitbut{
+                margin-left: 5px;
             }
 
             .card-body{
@@ -135,6 +150,15 @@
                 text-align: center;
             }
 
+            .customheader{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #theme{
+                margin-right: 40px;
+            }
+
         </style>
     </head>
     <body>
@@ -144,6 +168,12 @@
 
             {% endblock content %}
         </div>
+
+
+
+        
         
     </body>
+
+    
 </html>

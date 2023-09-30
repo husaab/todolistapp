@@ -8,7 +8,11 @@
             
 
             <h1>Hello {{request.user|title}}</h1>
+
             <h3 style="margin: 0">You have <i>{{count}}</i> incomplete task{{count|pluralize:"s"}}</h3>
+                
+            
+            
 
         </div>
 
@@ -24,7 +28,7 @@
     <div id="search-add-wrapper">
         <form method="GET" style="margin-top: 20px;display: flex;">
             <input type="text" name="search-area" value="{{search_input}}"">
-            <input class="button" type="submit" value="Search"> 
+            <input class="button submitbut" type="submit" value="Search"> 
         </form>
         <a id="add-link" href="{% url 'task-create' %}">&#x2b;</a>
     </div>
@@ -56,7 +60,7 @@
 
 
         {% empty %}
-            <h3 class="noitems">No items in list</h3>
+            <h3 class="noitems">No current tasks!</h3>
         {% endfor %}
     </div>
 
